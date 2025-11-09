@@ -2,21 +2,21 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Progetti Scarlatti – La strada della ricerca</title>
+  <title>Progetti didattici su Alessandro Scarlatti – Timeline</title>
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
     header { background:#2c3e50; color:#fff; padding:1rem; text-align:center; }
-    nav { background:#34495e; padding:.5rem; text-align:center; }
-    nav a { color:#fff; margin:0 1rem; text-decoration:none; }
-    section { padding:2rem; }
-    h2 { color:#2c3e50; }
-    .timeline { display:flex; flex-wrap:wrap; gap:1rem; margin:2rem 0; justify-content:center; }
+    .timeline { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin:2rem 0; }
     .timeline button { background:#ecf0f1; padding:1rem; border-radius:8px; border:1px solid #ccc; cursor:pointer; }
     .timeline button.active { background:#1e88e5; color:#fff; }
-    .panel { display:none; padding:1rem; border:1px solid #ddd; border-radius:8px; background:#fff; margin-top:1rem; }
-    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
-    .gallery div { background:#fff; border:1px solid #ddd; padding:1rem; border-radius:8px; }
-    footer { background:#2c3e50; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
+    .panel { display:none; padding:1rem; border:1px solid #ddd; border-radius:8px; background:#fff; margin:1rem auto; max-width:900px; }
+    #commenti { padding:2rem; background:#f0f0f0; }
+    #commenti form { display:grid; gap:.6rem; max-width:600px; margin:auto; }
+    #commenti input, #commenti textarea { padding:.6rem; border:1px solid #ccc; border-radius:8px; }
+    #commenti button { padding:.6rem 1rem; border:none; border-radius:8px; background:#1e88e5; color:#fff; cursor:pointer; }
+    #notes { list-style:none; padding:0; margin-top:1rem; display:grid; gap:.6rem; }
+    #notes li { padding:.8rem; border:1px solid #ddd; border-radius:10px; background:#fff; }
+    .meta { color:#666; font-size:.85rem; }
   </style>
 </head>
 <body>
@@ -25,79 +25,59 @@
     <p>Conservatorio San Pietro a Majella · Biblioteca Apostolica Vaticana</p>
   </header>
 
-  <nav>
-    <a href="#timeline">Timeline</a>
-    <a href="#map">Mappa concettuale</a>
-    <a href="#gallery">Galleria</a>
-    <a href="#commenti">Commenti</a>
-  </nav>
+  <!-- Timeline -->
+  <div class="timeline">
+    <button data-target="p1">Farfalletta intorno al lume di Alessandro Scarlatti: il viaggio di un'aria barocca dal manoscritto al leggio<br><small>Nicoletta Apuzzo e Maria Gabriella Taliercio</small></button>
+    <button data-target="p2">Dai manoscritti all’ascolto: la riscoperta delle musiche di Alessandro Scarlatti<br><small>Francesca Stanziola</small></button>
+    <button data-target="p3">Scripta manent: trascrivere per conoscere – Una ricerca tra le cantate di Alessandro Scarlatti<br><small>Marta Cataldo</small></button>
+    <button data-target="p4">Visita al Conservatorio San Pietro a Majella guidati dai manoscritti<br><small>Rosa Maria Amendola</small></button>
+    <button data-target="p5">Biblioteca Apostolica Vaticana: le note nel tempo<br><small>Giorgia Bucci e Ludovica Aisha Giada Vitiello</small></button>
+  </div>
 
-  <section id="timeline">
-    <h2>Timeline dei progetti</h2>
-    <div class="timeline">
-      <button data-target="p1">Progetto 1: Farfalletta intorno al lume</button>
-      <button data-target="p2">Progetto 2: Dai manoscritti all’ascolto</button>
-      <button data-target="p3">Progetto 3: Conservatorio e dintorni</button>
-      <button data-target="p4">Progetto 4: Workshop San Pietro a Majella</button>
-      <button data-target="p5">Progetto 5: Le Note del Tempo</button>
-    </div>
+  <!-- Pannelli con i contenuti dei progetti -->
+  <div id="p1" class="panel">
+    <h2>Farfalletta intorno al lume di Alessandro Scarlatti: il viaggio di un'aria barocca dal manoscritto al leggio</h2>
+    <p><em>Nicoletta Apuzzo e Maria Gabriella Taliercio</em></p>
+    <!-- Inserisci qui il testo del file Scarlatti.docx -->
+  </div>
 
-    <!-- Pannelli con contenuti -->
-    <div id="p1" class="panel">
-      <h3>Progetto 1 – Farfalletta intorno al lume</h3>
-      <p>Analisi filologica e pratica esecutiva dell’aria barocca di Scarlatti.</p>
-    </div>
-    <div id="p2" class="panel">
-      <h3>Progetto 2 – Dai manoscritti all’ascolto</h3>
-      <p>Trascrizione e ascolto della cantata “Lo dissi per gioco”.</p>
-    </div>
-    <div id="p3" class="panel">
-      <h3>Progetto 3 – Conservatorio e dintorni</h3>
-      <p>Unità di apprendimento interdisciplinare con laboratorio e visita guidata.</p>
-    </div>
-    <div id="p4" class="panel">
-      <h3>Progetto 4 – Workshop San Pietro a Majella</h3>
-      <p>Presentazione dei percorsi didattici e visita ai manoscritti.</p>
-    </div>
-    <div id="p5" class="panel">
-      <h3>Progetto 5 – Le Note del Tempo</h3>
-      <p>Storia della Biblioteca Vaticana e Fondo Barberini.</p>
-    </div>
-  </section>
+  <div id="p2" class="panel">
+    <h2>Dai manoscritti all’ascolto: la riscoperta delle musiche di Alessandro Scarlatti</h2>
+    <p><em>Francesca Stanziola</em></p>
+    <!-- Inserisci qui il testo del file 2.pdf -->
+  </div>
 
-  <section id="map">
-    <h2>Mappa concettuale</h2>
-    <div class="gallery">
-      <div>Scarlatti e il Barocco</div>
-      <div>Manoscritti</div>
-      <div>Trascrizione</div>
-      <div>Biblioteche</div>
-      <div>Didattica</div>
-      <div>Filologia</div>
-    </div>
-  </section>
+  <div id="p3" class="panel">
+    <h2>Scripta manent: trascrivere per conoscere – Una ricerca tra le cantate di Alessandro Scarlatti</h2>
+    <p><em>Marta Cataldo</em></p>
+    <!-- Inserisci qui il testo del file 3.pdf -->
+  </div>
 
-  <section id="gallery">
-    <h2>Galleria multimediale</h2>
-    <div class="gallery">
-      <div><strong>PDF</strong><br>Farfalletta intorno al lume</div>
-      <div><strong>Audio</strong><br>Lo dissi per gioco</div>
-      <div><strong>Video</strong><br>Laboratorio di copiatura</div>
-      <div><strong>Immagini</strong><br>Manoscritti Barberini e Chigi</div>
-    </div>
-  </section>
+  <div id="p4" class="panel">
+    <h2>Visita al Conservatorio San Pietro a Majella guidati dai manoscritti</h2>
+    <p><em>Rosa Maria Amendola</em></p>
+    <!-- Inserisci qui il testo del file 4.pdf -->
+  </div>
 
+  <div id="p5" class="panel">
+    <h2>Biblioteca Apostolica Vaticana: le note nel tempo</h2>
+    <p><em>Giorgia Bucci e Ludovica Aisha Giada Vitiello</em></p>
+    <!-- Inserisci qui il testo del file 5.pdf -->
+  </div>
+
+  <!-- Bacheca commenti -->
   <section id="commenti">
-    <h2>Bacheca commenti</h2>
-    <p>Lascia qui le tue riflessioni sui progetti!</p>
+    <h2>Bacheca del progetto</h2>
+    <form id="noteForm">
+      <input type="text" id="author" placeholder="Nome" required>
+      <textarea id="message" placeholder="Scrivi un commento..." rows="3" required></textarea>
+      <button type="submit">Pubblica</button>
+    </form>
+    <ul id="notes"></ul>
   </section>
-
-  <footer>
-    <p>© Conservatorio San Pietro a Majella – Progetti Didattici 2025</p>
-  </footer>
 
   <script>
-    // Script per mostrare i pannelli
+    // Gestione timeline
     const buttons = document.querySelectorAll('.timeline button');
     const panels = document.querySelectorAll('.panel');
     buttons.forEach(btn => {
@@ -108,6 +88,35 @@
         btn.classList.add('active');
       });
     });
+
+    // Bacheca commenti con localStorage
+    const key = 'projectNotes';
+    const form = document.getElementById('noteForm');
+    const list = document.getElementById('notes');
+    function load() {
+      const data = JSON.parse(localStorage.getItem(key) || '[]');
+      list.innerHTML = '';
+      data.forEach((n, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<div class="meta">${n.author} — ${new Date(n.date).toLocaleString()}</div><div>${n.message}</div>`;
+        list.appendChild(li);
+      });
+    }
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const note = {
+        author: document.getElementById('author').value.trim(),
+        message: document.getElementById('message').value.trim(),
+        date: Date.now()
+      };
+      if (!note.author || !note.message) return;
+      const data = JSON.parse(localStorage.getItem(key) || '[]');
+      data.unshift(note);
+      localStorage.setItem(key, JSON.stringify(data));
+      form.reset();
+      load();
+    });
+    load();
   </script>
 </body>
 </html>
