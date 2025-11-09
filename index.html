@@ -10,10 +10,10 @@
     nav a { color:#fff; margin:0 1rem; text-decoration:none; }
     section { padding:2rem; }
     h2 { color:#2c3e50; }
-    .timeline { display:flex; justify-content:space-around; margin:2rem 0; }
-    .timeline div { background:#ecf0f1; padding:1rem; border-radius:8px; cursor:pointer; }
-    .map { display:flex; flex-wrap:wrap; gap:1rem; }
-    .map div { flex:1 1 200px; background:#eaf2f8; padding:1rem; border-radius:8px; }
+    .timeline { display:flex; flex-wrap:wrap; gap:1rem; margin:2rem 0; justify-content:center; }
+    .timeline button { background:#ecf0f1; padding:1rem; border-radius:8px; border:1px solid #ccc; cursor:pointer; }
+    .timeline button.active { background:#1e88e5; color:#fff; }
+    .panel { display:none; padding:1rem; border:1px solid #ddd; border-radius:8px; background:#fff; margin-top:1rem; }
     .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
     .gallery div { background:#fff; border:1px solid #ddd; padding:1rem; border-radius:8px; }
     footer { background:#2c3e50; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
@@ -29,24 +29,45 @@
     <a href="#timeline">Timeline</a>
     <a href="#map">Mappa concettuale</a>
     <a href="#gallery">Galleria</a>
-    <a href="#quiz">Quiz</a>
     <a href="#commenti">Commenti</a>
   </nav>
 
   <section id="timeline">
     <h2>Timeline dei progetti</h2>
     <div class="timeline">
-      <div>Progetto 1: Farfalletta intorno al lume</div>
-      <div>Progetto 2: Dai manoscritti all’ascolto</div>
-      <div>Progetto 3: Conservatorio e dintorni</div>
-      <div>Progetto 4: Workshop San Pietro a Majella</div>
-      <div>Progetto 5: Le Note del Tempo</div>
+      <button data-target="p1">Progetto 1: Farfalletta intorno al lume</button>
+      <button data-target="p2">Progetto 2: Dai manoscritti all’ascolto</button>
+      <button data-target="p3">Progetto 3: Conservatorio e dintorni</button>
+      <button data-target="p4">Progetto 4: Workshop San Pietro a Majella</button>
+      <button data-target="p5">Progetto 5: Le Note del Tempo</button>
+    </div>
+
+    <!-- Pannelli con contenuti -->
+    <div id="p1" class="panel">
+      <h3>Progetto 1 – Farfalletta intorno al lume</h3>
+      <p>Analisi filologica e pratica esecutiva dell’aria barocca di Scarlatti.</p>
+    </div>
+    <div id="p2" class="panel">
+      <h3>Progetto 2 – Dai manoscritti all’ascolto</h3>
+      <p>Trascrizione e ascolto della cantata “Lo dissi per gioco”.</p>
+    </div>
+    <div id="p3" class="panel">
+      <h3>Progetto 3 – Conservatorio e dintorni</h3>
+      <p>Unità di apprendimento interdisciplinare con laboratorio e visita guidata.</p>
+    </div>
+    <div id="p4" class="panel">
+      <h3>Progetto 4 – Workshop San Pietro a Majella</h3>
+      <p>Presentazione dei percorsi didattici e visita ai manoscritti.</p>
+    </div>
+    <div id="p5" class="panel">
+      <h3>Progetto 5 – Le Note del Tempo</h3>
+      <p>Storia della Biblioteca Vaticana e Fondo Barberini.</p>
     </div>
   </section>
 
   <section id="map">
     <h2>Mappa concettuale</h2>
-    <div class="map">
+    <div class="gallery">
       <div>Scarlatti e il Barocco</div>
       <div>Manoscritti</div>
       <div>Trascrizione</div>
@@ -66,16 +87,6 @@
     </div>
   </section>
 
-  <section id="quiz">
-    <h2>Quiz interattivo</h2>
-    <p>Domanda: Quale forma musicale è tipica di Scarlatti?</p>
-    <ul>
-      <li>Aria strofica</li>
-      <li>Sinfonia classica</li>
-      <li>Concerto romantico</li>
-    </ul>
-  </section>
-
   <section id="commenti">
     <h2>Bacheca commenti</h2>
     <p>Lascia qui le tue riflessioni sui progetti!</p>
@@ -84,5 +95,19 @@
   <footer>
     <p>© Conservatorio San Pietro a Majella – Progetti Didattici 2025</p>
   </footer>
+
+  <script>
+    // Script per mostrare i pannelli
+    const buttons = document.querySelectorAll('.timeline button');
+    const panels = document.querySelectorAll('.panel');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        panels.forEach(p => p.style.display = 'none');
+        buttons.forEach(b => b.classList.remove('active'));
+        document.getElementById(btn.dataset.target).style.display = 'block';
+        btn.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
